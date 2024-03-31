@@ -4,12 +4,12 @@ import numpy as np
 def resistance_coil(
         coil,                   # in meters
         r_turn,                 # in meters
-        po=1.68 * 10 ** (-8)    # Om * m
+        po=1.667 * 10 ** (-8)    # Om * m
 ):
     """
     parameters are specified in meters
     """
-    resistance = np.sum(2 * po * coil / r_turn ** 0.5)
+    resistance = np.sum(2 * po * coil / r_turn ** 2)
     return resistance
 
 
